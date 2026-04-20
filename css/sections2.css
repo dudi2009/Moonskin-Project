@@ -1,0 +1,172 @@
+.sections2,
+#layanan {
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+#layanan {
+  padding: 30px 0 20px;
+  background-color: #f0f8ff; /* putih kebiruan */
+}
+
+#layanan.is-active {
+  background: linear-gradient(180deg, rgba(30, 58, 138, 0.05) 0%, rgba(30, 58, 138, 0.01) 100%);
+}
+
+.sections2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.sections2 h1 {
+  color: #1E3A8A; /* kontras judul */
+  font-size: 50px;
+}
+.sections2 p {
+  font-size: 20px;
+}
+.layanan-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 24px;
+}
+/* group box */
+
+/* size & color */
+.box1-lay,
+.box2-lay,
+.box3-lay {
+  flex: 1 1 320px;
+  max-width: 400px;
+  height: 400px;
+  border-radius: 5px;
+  background: white;
+  border: 1px solid rgba(225, 227, 226, 0.08);
+}
+/* size & color end */
+
+/* box img */
+.box1-lay img,
+.box2-lay img,
+.box3-lay img {
+  margin: 50px 0 10px 40%;
+  background-color: #1E3A8A; /* kontras bulat */
+  border-radius: 40px;
+  padding: 5px;
+  width: 80px;
+}
+
+/* box img */
+
+/* box h2 */
+.box1-lay h2,
+.box2-lay h2,
+.box3-lay h2 {
+  text-align: center;
+  color: #1E3A8A; /* kontras judul */
+  margin-bottom: 40px;
+}
+/* box h2 end */
+
+/* box p */
+.box1-lay p,
+.box2-lay p,
+.box3-lay p {
+  text-align: center;
+  margin: 0 20px 0 20px;
+}
+/* box p end*/
+
+/* group box end */
+
+/* group hover */
+.box1-lay,
+.box2-lay,
+.box3-lay,
+.box1-lay img,
+.box2-lay img,
+.box3-lay img,
+.box1-lay h2,
+.box2-lay h2,
+.box3-lay h2,
+.box1-lay p,
+.box2-lay p,
+.box3-lay p {
+  transition: all 0.7s ease;
+}
+
+.box1-lay:hover,
+.box2-lay:hover,
+.box3-lay:hover {
+  background: linear-gradient(160deg, #1E3A8A 0%, #4A90E2 100%); /* gradient biru tua ke muda */
+  cursor: pointer;
+}
+
+.box2-lay.active-card {
+  background: linear-gradient(160deg, #1E3A8A 0%, #4A90E2 100%); /* gradient biru tua ke muda */
+  box-shadow: 0 18px 40px rgba(30, 58, 138, 0.4);
+  transform: translateY(-8px);
+}
+
+.box1-lay:hover img,
+.box2-lay:hover img,
+.box3-lay:hover img {
+  background-color: aliceblue;
+}
+
+.box2-lay.active-card img {
+  background-color: aliceblue;
+}
+
+.box1-lay:hover h2,
+.box2-lay:hover h2,
+.box3-lay:hover h2,
+.box1-lay:hover p,
+.box2-lay:hover p,
+.box3-lay:hover p {
+  color: white;
+}
+
+.box2-lay.active-card h2,
+.box2-lay.active-card p {
+  color: white;
+}
+/* Group Hover end */
+
+@media (max-width: 1100px) {
+  .layanan-box {
+    gap: 18px;
+  }
+
+  .box1-lay,
+  .box2-lay,
+  .box3-lay {
+    flex-basis: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sections2 h1 {
+    font-size: 36px;
+  }
+
+  .sections2 p {
+    font-size: 18px;
+  }
+
+  .layanan-box {
+    padding: 0 16px;
+  }
+
+  .box1-lay,
+  .box2-lay,
+  .box3-lay {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 320px;
+  }
+}

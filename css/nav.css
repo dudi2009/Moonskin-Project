@@ -1,0 +1,151 @@
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  color: white;
+  font-weight: bolder;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+  z-index: 100;
+  padding: 10px 0 10px;
+}
+.nav-hitam {
+  background: linear-gradient(
+    112.9deg,
+    #1E3A8A 0.98%, /* biru tua mulanya */
+    rgba(74, 144, 226, 0.9) 165.36% /* nyambung ke biru calm */
+  ) !important;
+  color: white;
+  border-radius: 0 0 20px 20px; /* Menolak rounded corner menjadi kotak full width */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  padding: 15px 50px !important; /* Memberi jarak ke dalam (opsional), tidak memotong full-width layarnya */
+  width: 100%;
+  margin: 0;
+}
+.nav-hitam .nav-kiri {
+  margin-left: 0;
+}
+.nav-hitam .nav-kanan .masuk {
+  margin-right: 0;
+}
+.logo-kucing{
+  width: 40px;
+}
+.nav-kiri {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: 30px;
+}
+.nav-kiri img {
+  background-color: white;
+  padding: 5px;
+  border-radius: 20px;
+}
+.nav-tengah , .nav-kanan{
+    padding-top:10px ;
+}
+.nav-tengah ul {
+  display: flex;
+  gap: 20px;
+}
+.nav-tengah ul li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.nav-tengah ul li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+.nav-link.active {
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 8px 14px;
+  transform: translateY(-1px);
+}
+.nav-kanan .daftar {
+  color: white;
+  font-size: larger;
+  border: none;
+  background-color: rgba(240, 248, 255, 0);
+  margin-right: 10px;
+}
+.nav-kanan .masuk {
+  color: white;
+  font-size: larger;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: #1E3A8A; /* kontras buat tombol masuk */
+  padding: 5px 10px 5px 10px;
+  margin-right: 30px;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .nav-kiri {
+    margin-left: 0;
+  }
+
+  .nav-tengah ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-tengah ul li {
+    font-size: 18px;
+  }
+
+  .nav-kanan .daftar,
+  .nav-kanan .masuk {
+    font-size: 16px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-kiri,
+  .nav-kanan,
+  .nav-tengah {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-kiri {
+    order: 1;
+  }
+
+  .nav-tengah {
+    order: 3;
+    padding-top: 0;
+  }
+
+  .nav-kanan {
+    order: 2;
+    padding-top: 0;
+  }
+
+  .nav-kanan .daftar {
+    margin-right: 14px;
+  }
+}
